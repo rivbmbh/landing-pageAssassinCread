@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid CSS</title>
+    <link rel="stylesheet" href="../css/final.css">
+</head>
+<style>
+    body {
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+
+    .container {
+        width: 600px;
+        margin: 50px auto;
+        border: solid 5px slategray;
+        box-sizing: border-box;
+        padding: 5px;
+        display: grid;
+        grid-template-areas: "header header"
+            "aside main"
+            "nav main"
+            "footer footer"
+        ;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1fr 1fr 1.3fr;
+    }
+
+    header {
+        grid-area: header;
+        background-color: #b063d8;
+        padding: 40px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside {
+        grid-area: aside;
+        background-color: skyblue;
+        padding: 60px 0;
+    }
+
+    nav {
+        grid-area: nav;
+        background-color: tomato;
+        padding: 100px 0;
+    }
+
+    main {
+        grid-area: main;
+        background-color: burlywood;
+        box-sizing: border-box;
+        flex: 1.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: gray;
+        padding: 20px 0;
+    }
+</style>
+
+<body>
+    <!-- <section class="text-white font-bold text-2xl text-center box-border mx-auto my-[50px] w-[600px] p-[5px] border-solid border border-slate-600">
+        <header class="bg-purple-500 p-10">HEADER</header>
+        <div>
+            <div class="after:content-none after:clear-both block">
+                <div class="w-[40%] float-left">
+                    <aside class="bg-sky-400 py-[60px] px-0">ASIDE</aside>
+                    <nav class="bg-rose-500 py-[100px] px-0">NAVBAR</nav>
+                </div>
+                    <main class="bg-orange-300 w-[60%] p-[175.8px] float-right box-border">MAIN</main>      
+            </div>
+        </div>
+        
+    </section> -->
+    <section class="container">
+        <header>HEADER</header>
+        <aside>ASIDE</aside>
+        <nav>NAVBAR</nav>
+        <main>MAIN</main>
+        <footer>FOOTER</footer>
+    </section>
+</body>
+
+</html>

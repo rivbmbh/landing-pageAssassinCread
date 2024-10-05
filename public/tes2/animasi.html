@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Typing</title>
+    <!-- <link rel="stylesheet" href="./css/final.css"> -->
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:'mono','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: bisque;
+    }
+    .wrapper{
+        display: inline-flex;
+        align-items: center;
+    }
+    .wrapper .staticText{
+        color:black;
+        font-size: 60px;
+        font-weight: 600;
+        /* height: 100%; */
+    }
+    .wrapper .dinamicTexts{
+        height: 90px;
+        margin-left: 15px;
+        line-height: 90px;
+        /* background-color: blue; */
+        /* padding-bottom: 4px; */
+        overflow: hidden;
+    }
+    .dinamicTexts li{
+        list-style: none;
+        color: steelblue;
+        font-size: 60px;
+        position: relative;
+        font-weight: 800;
+        top: 0;
+        /* padding: 2px; */
+        animation: slide 10s steps(4) infinite;
+    }
+    @keyframes slide{
+        100%{
+            top:-360px;
+        }
+    }
+    .dinamicTexts li span{
+        position: relative;
+    }
+    .dinamicTexts li span::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        background-color: bisque;
+        padding-bottom: 10px;
+        height: 100%;
+        width: 100%;
+        border-left: solid 2px steelblue;
+        animation: typing 2.5s steps(8) infinite;
+    }
+    /* animation typing */
+    @keyframes typing{
+        100%{
+            left: 100%;
+            margin: 0 -45px 0 45px;
+        }
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="staticText">Platform</div>
+        <ul class="dinamicTexts">
+            <li><span>Youtube</span></li>
+            <li><span>Instagram</span></li>
+            <li><span>Facebook</span></li>
+            <li><span>Tiktok</span></li>
+        </ul>
+    </div>
+</body>
+</html>

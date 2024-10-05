@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "assassin";
+  src: url("/public/assets/font/Assassin.ttf") format("truetype");
+}
+
+@layer components {
+  .header-h1 {
+    @apply text-sm mn:text-xl p-0 sm:text-2xl text-slate-100;
+  }
+  .header-valhalla {
+    @apply inline-block p-0 text-sm mn:text-2xl sm:text-3xl font-bold text-center md:text-start md:ml-2 text-green-600;
+  }
+  .nav-list {
+    @apply inline-block text-xl text-slate-100 py-[0.5px] px-0 group-hover:animate-nav;
+  }
+  .nav-list-burger {
+    @apply inline-block text-slate-800 dark:text-slate-100 font-bold group-hover:text-green-500 active:text-green-500;
+  }
+  .sign-up {
+    @apply inline-block relative left-1 items-stretch bg-emerald-400 border-solid dark:bg-slate-900 dark:ring-1 dark:ring-white dark:hover:bg-slate-800 dark:active:bg-emerald-500 text-white py-1 px-4 rounded-lg active:bg-emerald-500 hover:bg-emerald-300 font-bold;
+  }
+  .card-img-container {
+    @apply bg-white dark:bg-white rounded-lg max-w-fit overflow-hidden w-80;
+  }
+  .card-img {
+    @apply group-hover:scale-95 transition-all duration-500 rounded-lg;
+  }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/final.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+    <script src="../assets/fontawesome/js/all.min.js"></script>
+    <style>
+        body {
+            background-image: url('../assets/image/3.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <section class="flex w-full h-[100vh] justify-center items-center font-mono">
+        <div class="bg-white/20 backdrop-blur-sm w-[560px] h-max rounded-3xl flex justify-center">
+            <form action="#">
+                <div class="text-center text-white font-bold text-3xl p-6 selection:bg-gray-300 selection:text-black">
+                    <div class="p-8">
+                        <h2 class="mb-6 text-4xl">Login</h2>
+                        <p class="text-xs text-center text-green-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis aliquam commodi molestiae eos asperiores adipisci!</p>
+                    </div>
+                    <div class="space-y-5 text-sm">
+                        <div class="text-slate-500">
+                            <input class="w-[88%] p-[12px] rounded-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-500 invalid:focus:ring-red-500 invalid:focus:border-red-500 peer" type="email" placeholder="email">
+                            <p class="text-red-500 text-start ml-9 mt-2 hidden peer-invalid:block">email invalid</p>
+                        </div>
+                        <div class="text-slate-500">
+                            <input class="w-[88%] p-[12px] rounded-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-500 invalid:focus:ring-red-500 invalid:focus:border-red-500 peer" type="password" minlength="8" placeholder="password">
+                            <p class="text-red-500 text-start ml-9 mt-2 hidden peer-invalid:block">password is too short</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center space-x-40 mt-6 mx-6 text-lg text-green-400">
+                        <input type="checkbox" name="rememberMe" id="remember" >&nbsp;remember me
+                        <a href="../index.html" class="hover:text-green-500 hover:underline">forgot password</a>
+                    </div>
+                    <div class="justify-center p-8 mt-3 space-y-2 items-center">
+                        <button class="p-[12px] w-full mb-8 bg-green-400 rounded-md text-base hover:bg-green-500">Subscribe</button>
+                        <hr>
+                        <a class="block text-base mt-5 p-3 hover:underline" href="registration.html">sign up</a>
+                        <span class="block text-green-400 text-base">or login with</span>
+                        <ul class="flex justify-center p-3 text-white font-mono space-x-10">
+                            <li><a class="text-2xl" href="#"><i class="fa-brands fa-github text-white hover:text-green-500"></i></a></li>
+                            <li><a class="text-2xl" href="#"><i class="fa-brands fa-facebook text-white hover:text-green-500"></i></a></li>
+                            <li><a class="text-2xl" href="#"><i class="fa-brands fa-instagram text-white hover:text-green-500"></i></a></li>
+                            <li><a class="text-2xl" href="#"><i class="fa-brands fa-twitter text-white hover:text-green-500"></i></a></li>
+                            <li><a class="text-2xl" href="#"><i class="fa-brands fa-google text-white hover:text-green-500"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

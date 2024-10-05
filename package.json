@@ -1,0 +1,20 @@
+{
+  "name": "portofoliorab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/css/input.css -o ./public/css/tailwind.css --watch",
+    "dev2": "npx tailwindcss -i ./src/css/input.css -o ./public/css/final.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.7"
+  },
+  "dependencies": {
+    "tailwind-typewriter": "^1.0.1",
+    "typed.js": "^2.1.0"
+  }
+}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./css/final.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+    <script src="./assets/fontawesome/js/all.min.js"></script>
+</head>
+<body class="bg-slate-100 dark:bg-slate-700">
+    <header
+    class="flex w-full bg-slate-800 bg-cover justify-between items-center p-5 fixed z-[4]">
+        <!-- img logo -->
+        <div id="home" class="flex flex-col md:flex-row font-assassin text-white content-center sm:pl-3 lg:pl-5">
+            <span class="header-h1">Assassin'S Creed</span>
+            <span class="header-valhalla">Valhalla</span>
+        </div>
+
+        <!-- navbar list -->
+        <nav class="font-assassin">
+            <ul class="hidden justify-end text-xl space-x-11 items-center lg:pr-5 xl:flex">
+
+                <!-- navbar list -->
+                <li class="group"><a class="nav-list" href="#">Home</a></li>
+                <li class="group"><a class="nav-list" href="#about">About</a></li>
+                <li class="group"><a class="nav-list" href="#">Products</a></li>
+                <li class="group"><a class="nav-list" href="#services">Services</a></li>
+                <li class="group"><a class="nav-list" href="#contact">Contact</a></li>
+                <li class=""><a class="sign-up"  href="./sign/registration.html">Sign Up</a></li>
+
+                <!-- toggle dark -->
+                <li class="flex flex-wrap items-center py-1.5 px-3 gap-2 bg-slate-100/50 dark:bg-white/40 rounded-lg">                    
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 bg-yellow-300 p-1 rounded-full dark:bg-transparent">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                    </svg> -->
+                    <button id="darkMode" class="w-10 h-5 p-0.5 rounded-full bg-white">
+                        <div class="w-4 h-4 bg-slate-300 dark:bg-slate-800 rounded-full ring-1 ring-black dark:ring-slate-500 dark:translate-x-5"></div>
+                    </button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:bg-slate-800 p-1 rounded-full bg-transparent">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </li>
+
+            </ul>
+
+            <!-- <ul> for < xl(1280px size screen) responsive -->
+            <ul class="flex justify-end space-x-6 mr-3 items-center text-xl xl:hidden">
+
+                <!-- signup -->
+                <li class="hidden lm:inline"><a class="sign-up" href="./sign/registration.html">Sign Up</a></li>
+
+                <!-- burger/cucumber -->
+                <li id="burger"><a class="inline-block items-stretch text-white py-1 right-5 text-3xl xl:hidden" href="#"><i
+                    class="fa-solid fa-bars text-white hover:text-green-500 active:text-green-600"></i></a></li>
+
+            </ul>        
+
+            <!-- ul for burger/cucumber click -->
+            <ul id="listBurger" class="container hidden max-w-fit mx-auto rounded-l-lg shadow-lg bg-slate-200 dark:bg-slate-500 absolute text-start right-2 top-1 space-y-4 pl-3 pr-28 pb-3 md:pl-5 md:pr-44 md:pb-3 md:text-xl xl:hidden">
+
+                <!-- list small-md screen  -->
+                <li id="closeBurger" class="absolute right-2 top-0 mt-2 p-1  rounded-full hover:bg-red-500 active:bg-red-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-3xl w-4 h-4 md:w-6 md:h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </li>
+
+                <li class="group"><a class="nav-list-burger" href="#">Home</a></li>
+                <li class="group"><a class="nav-list-burger" href="#about">About</a></li>
+                <li class="group"><a class="nav-list-burger" href="#">Products</a></li>
+                <li class="group"><a class="nav-list-burger" href="#services">Services</a></li>
+                <li class="group"><a class="nav-list-burger" href="#contact">Contact</a></li>
+                <li class="inline-block lm:hidden group"><a class="sign-up left-0" href="./sign/registration.html">Sign Up</a></li>
+
+                <!-- toggle dark mode -->
+                <li class="flex flex-wrap items-center py-1.5 px-3 gap-2 bg-slate-100/50 dark:bg-white/40 rounded-lg">                    
+                    <button id="darkMode2" class="w-10 h-5 p-0.5 rounded-full bg-white">
+                        <div class="w-4 h-4 bg-slate-500/50 dark:bg-slate-800 rounded-full ring-1 ring-black dark:ring-slate-500 dark:translate-x-5"></div>
+                    </button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 dark:bg-slate-800 p-1 rounded-full bg-transparent">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </li>
+             
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="pt-28 pb-2">
+        <div class="py-8 px-4 text-center font-assassin">
+            <h1 class="font-bold ml-2 underline text-5xl  text-slate-700 dark:text-slate-100 ">Gallery</h1>
+            <p class="mt-5 text-xl text-slate-700 dark:text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non in dolore consequuntur hic reiciendis cupiditate est quibusdam magnam. Tempora, repellendus?</p>
+        </div>
+
+        <div class="p-2 grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4 md:p-4">
+            <h2 class="text-md sm:text-2xl lg:text-3xl ml-3 md:m-0 font-assassin font-semibold text-slate-700 dark:text-slate-100 md:col-start-4 md:row-start-2 md:flex md:justify-center"><span class="self-center">Welcome To <strong class="text-lg sm:text-3xl lg:text-4xl text-green-600 font-bold">Valhalla</strong></span></h2>
+
+            <div class="flex item-end text-sm md:text-xl ml-3 md:m-0 font-semibold text-slate-700 dark:text-slate-100 md:col-start-2 md:row-start-2 md:flex"><span class="self-end"><i class="fa-brands fa-instagram"></i> @riv_bmbh</span></div>
+            
+            <!-- image -->
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500">
+                <div style="background-image: url(assets/image/gallery/1.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-left"></div>
+            </div>
+
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500 md:col-start-3">
+                <div style="background-image: url(assets/image/gallery/2.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-center"></div>
+            </div>
+
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500">
+                <div style="background-image: url(assets/image/gallery/3.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500"></div>
+            </div>
+
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500">
+                <div style="background-image: url(assets/image/gallery/4.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500"></div>
+            </div>
+
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500">
+                <div style="background-image: url(assets/image/gallery/5.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500"></div>
+            </div>
+
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500 md:col-start-2">
+                <div style="background-image: url(assets/image/gallery/6.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-center"></div>
+            </div>
+
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500 md:col-start-4">
+                <div style="background-image: url(assets/image/gallery/7.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500"></div>
+            </div>
+
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500">
+                <div style="background-image: url(assets/image/gallery/8.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-left"></div>
+            </div>
+
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500 md:col-start-3">
+                <div style="background-image: url(assets/image/gallery/8.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-right"></div>
+            </div>
+            
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500 md:col-start-2">
+                <div  style="background-image: url(assets/image/gallery/10.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-left"></div>
+            </div>
+            
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500 md:col-start-4">
+                <div style="background-image: url(assets/image/gallery/10.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-right"></div>
+            </div>
+
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500">
+                <div style="background-image: url(assets/image/gallery/11.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-center"></div>
+            </div>
+
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500">
+                <div style="background-image: url(assets/image/gallery/12.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-left"></div>
+            </div>
+
+            <div class="group overflow-hidden relative aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3] hover:scale-95 transition-all duration-500 md:col-start-4">
+                <div style="background-image: url(assets/image/gallery/12.jpg);" class="w-full h-full bg-cover absolute group-hover:scale-125 transition-all duration-500 bg-right"></div>
+            </div>
+
+            <!-- footer -->
+            <div class="dark:text-slate-100 text-slate-800 w-fit text-sm lm:text-md sm:text-lg ml-3 md:col-start-3 md:row-start-6 md:flex"><span class="self-center">design by<strong>-RBomboah</strong></span></div>
+        </div>
+    </section>
+
+  <!-- CONTACT -->
+    <footer id="contact">
+    <div class="container mx-auto max-w-full  bg-slate-800 p-5 md:gap-5 md:flex md:flex-wrap-reverse md:justify-center lg:flex-nowrap lg:w-full lg:py-10 xl:px-36">
+        <div class="mb-5 sm:w-full md:w-80 md:m-0 xl:w-full">
+            <h2 class="font-bold text-3xl text-white font-assassin px-2 py-1 border-solid border-l-[5px] border-emerald-500 dark:border-white">Assassin'S Creed<strong class="text-green-600"> Valhalla</strong>
+            </h2>
+            <p class="text-md mt-3 text-slate-300 text-justify">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum accusamus dolorum minima
+                consequuntur ex, consectetur sunt velit. Beatae itaque possimus fugit recusandae harum. Illo sint,
+                molestiae repellendus iste repellat eos?
+            </p>
+        </div>
+        
+        <div class="mb-5 sm:w-full md:w-80 md:mb-0 xl:w-full">
+            <h3 class="font-bold text-xl text-white font-assassin border-solid py-2 border-b-2 border-emerald-500 dark:border-white sm:text-2xl md:text-center lg:text-xl lg:text-justify">CONTACT US</h3>
+            <ul class="mt-3 space-y-1 text-slate-300 text-md">
+                <li class="">Malahasa Street RT 02 | RW 02</li>
+
+                <li class="">New Island</li>
+                <li class="">Indonesia</li>
+                <li class=""><strong>Phone :</strong> +62-8124262xx</li>
+                <li class=""><strong>Email :</strong> valhalla@gmail.com</li>
+            </ul>
+            <div class="mt-7">
+                <ul class="flex space-x-3 sm:text-xl">
+                    <li class="bg-black rounded-full px-3 py-[6px] hover:bg-emerald-500 dark:hover:bg-white group"><a class="text-lg"
+                            href="#"><i class="fa-brands fa-facebook text-white group-hover:text-black"></i></a></li>
+                    <li class="bg-black rounded-full px-3 py-[6px] hover:bg-emerald-500 dark:hover:bg-white group"><a class="text-lg"
+                            href="#"><i class="fa-brands fa-instagram text-white group-hover:text-black"></i></a></li>
+                    <li class="bg-black rounded-full px-3 py-[6px] hover:bg-emerald-500 dark:hover:bg-white group"><a class="text-lg"
+                            href="#"><i class="fa-brands fa-twitter text-white group-hover:text-black"></i></a></li>
+                    <li class="bg-black rounded-full px-3 py-[6px] hover:bg-emerald-500 dark:hover:bg-white group"><a class="text-lg"
+                            href="#"><i class="fa-brands fa-discord text-white group-hover:text-black"></i></a></li>
+                    <li class="bg-black rounded-full px-3 py-[6px] hover:bg-emerald-500 dark:hover:bg-white group"><a class="text-lg"
+                            href="#"><i class="fa-brands fa-github text-white group-hover:text-black"></i></a></li>
+                </ul>
+            </div>
+        </div>  
+
+        <div class="mb-5 sm:w-full md:w-96 md:m-0 md:text-center lg:text-justify xl:w-full">
+            <h3 class="font-bold text-xl text-white font-assassin border-solid py-2 border-b-2 border-emerald-500 dark:border-white sm:text-2xl lg:text-xl">OUR NEWSLETTER
+            </h3>
+            <p class="text-md mt-4 text-white md:text-center lg:text-justify">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio vero earum laboriosam pariatur
+                id voluptatibus.
+            </p>
+            <div class="mt-12 pb-9 px-3 md:p-0 flex justify-between">
+                <input type="text" class="text-gray-600 focus:outline-none dark:ring-1 dark:ring-white w-[100%] p-2">
+                <button class="bg-emerald-500 px-3 py-2 hover:bg-emerald-600 active:bg-emerald-700 dark:bg-slate-900 dark:ring-1 dark:ring-white dark:hover:bg-slate-800 text-white dark:active:bg-slate-950">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <div class="bg-black p-6 text-center text-white text-sm">
+        <span>
+            © Copyright <strong>RBomboah</strong>. All Rights Reserved
+        </span>
+        <br>
+        <span>Designed by <a href="https://tailwindcss.com"
+                class="text-green-500"><strong>TailwindCSS</strong></a></span>
+    </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

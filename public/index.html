@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<!-- <html lang="en"> -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="./css/final.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,200;0,300;0,400;1,500;1,600;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+    <script src="./assets/fontawesome/js/all.min.js"></script>
+</head>
+
+<body class="bg-slate-100 dark:bg-slate-700 dark:text-white selection:bg-gray-300 selection:text-slate-800">
+    <header
+    class="flex w-full bg-slate-800 bg-cover justify-between items-center p-5 fixed z-[4]">
+        <!-- img logo -->
+        <div id="home" class="flex flex-col content-center text-white md:flex-row font-assassin sm:pl-3 lg:pl-5">
+            <span class="header-h1">Assassin'S Creed</span>
+            <span class="header-valhalla">Valhalla</span>
+        </div>
+
+        <!-- navbar list -->
+        <nav class="font-assassin">
+            <ul class="items-center justify-end hidden text-xl space-x-11 lg:pr-5 xl:flex">
+
+                <!-- navbar list -->
+                <li class="group"><a class="nav-list" href="#">Home</a></li>
+                <li class="group"><a class="nav-list" href="#about">About</a></li>
+                <li class="group"><a class="nav-list" href="#">Products</a></li>
+                <li class="group"><a class="nav-list" href="#services">Services</a></li>
+                <li class="group"><a class="nav-list" href="#contact">Contact</a></li>
+                <li class=""><a class="sign-up"  href="./sign/registration.html">Sign Up</a></li>
+
+                <!-- toggle dark -->
+                <li class="flex flex-wrap items-center py-1.5 px-3 gap-2 bg-slate-100/50 dark:bg-white/40 rounded-lg">                    
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 p-1 bg-yellow-300 rounded-full dark:bg-transparent">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                    </svg> -->
+                    <button id="darkMode" class="w-10 h-5 p-0.5 rounded-full bg-white">
+                        <div class="w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-800 ring-1 ring-black dark:ring-slate-500 dark:translate-x-5"></div>
+                    </button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 p-1 bg-transparent rounded-full dark:bg-slate-800">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </li>
+
+            </ul>
+
+            <!-- <ul> for < xl(1280px size screen) responsive -->
+            <ul class="flex items-center justify-end mr-3 space-x-6 text-xl xl:hidden">
+
+                <!-- signup -->
+                <li class="hidden lm:inline"><a class="sign-up" href="./sign/registration.html">Sign Up</a></li>
+
+                <!-- burger/cucumber -->
+                <li id="burger"><a class="items-stretch inline-block py-1 text-3xl text-white right-5 xl:hidden" href="#"><i
+                    class="text-white fa-solid fa-bars hover:text-green-500 active:text-green-600"></i></a></li>
+
+            </ul>        
+
+            <!-- ul for burger/cucumber click -->
+            <ul id="listBurger" class="container absolute hidden pb-3 pl-3 mx-auto space-y-4 rounded-l-lg shadow-lg max-w-fit bg-slate-200 dark:bg-slate-500 text-start right-2 top-1 pr-28 md:pl-5 md:pr-44 md:pb-3 md:text-xl xl:hidden">
+
+                <!-- list small-md screen  -->
+                <li id="closeBurger" class="absolute top-0 p-1 mt-2 rounded-full right-2 hover:bg-red-500 active:bg-red-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-3xl md:w-6 md:h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </li>
+
+                <li class="group"><a class="nav-list-burger" href="#">Home</a></li>
+                <li class="group"><a class="nav-list-burger" href="#about">About</a></li>
+                <li class="group"><a class="nav-list-burger" href="#">Products</a></li>
+                <li class="group"><a class="nav-list-burger" href="#services">Services</a></li>
+                <li class="group"><a class="nav-list-burger" href="#contact">Contact</a></li>
+                <li class="inline-block lm:hidden group"><a class="left-0 sign-up" href="./sign/registration.html">Sign Up</a></li>
+
+                <!-- toggle dark mode -->
+                <li class="flex flex-wrap items-center py-1.5 px-3 gap-2 bg-slate-100/50 dark:bg-white/40 rounded-lg">                    
+                    <button id="darkMode2" class="w-10 h-5 p-0.5 rounded-full bg-white">
+                        <div class="w-4 h-4 rounded-full bg-slate-500/50 dark:bg-slate-800 ring-1 ring-black dark:ring-slate-500 dark:translate-x-5"></div>
+                    </button>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 p-1 bg-transparent rounded-full dark:bg-slate-800">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                    </svg>
+                </li>
+             
+            </ul>
+        </nav>
+    </header>
+
+    <!-- LANDING PAGE -->
+    <section id="about" class="relative pt-11">
+        <div class="relative top-0 bottom-0 flex flex-col items-center justify-center text-center">
+            <img class="w-full object-cover h-[100vh]" src="./assets/image/1.jpg" alt="hero-bg">
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center font-assassin top-2">
+
+            <!-- ANIMATION TYPING -->
+            <div class="relative overflow-hidden">
+                <!-- title welcome to valhalla -->
+                <h1 class="relative mx-10 text-4xl font-bold text-white type-title sm:sm-0 md:text-5xl xl:text-6xl"></h1>
+            </div>
+
+            <p class="inline-block mx-12 mt-8 text-lg font-bold text-center text-white md:mx-24 lg:mx-32 xl:mx-56">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Facere recusandae perferendis inventore placeat debitis blanditiis!
+            </p>
+
+            <a class="px-5 py-2 mt-12 text-xl font-bold text-white border-solid rounded-lg bg-emerald-400 dark:bg-slate-900 dark:ring-1 dark:ring-white top-32 hover:bg-emerald-300 dark:hover:bg-slate-800 active:bg-emerald-500 dark:active:bg-emerald-500 "
+                href="#">Get Started</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about"
+        class="p-8 text-left bg-slate-200 dark:bg-slate-600 sm:text-center font-assassin">
+        <h1 class="mt-4 mb-4 text-4xl font-bold">VALHALLA</h1>
+        <p class="mx-8 text-xl">
+            Valhalla, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione velit assumenda veritatis ut
+            perspiciatis sit, dolorem at! Doloremque, nisi optio. Quas possimus pariatur assumenda voluptatem obcaecati
+            rem iusto quibusdam libero! Animi, consectetur. Libero iste velit, hic nostrum adipisci, doloribus quidem
+            nisi voluptatibus incidunt sit id ipsum a dolores error. Reprehenderit ipsa magnam consequatur, tempora,
+            quibusdam explicabo fugit suscipit, aliquid natus laudantium dolores. Nulla perspiciatis cupiditate magnam
+            consequatur, reiciendis architecto? Tempore voluptatem unde accusantium magnam ipsum quibusdam quae
+            consequatur? Dolorum laboriosam voluptatum est quo deleniti corrupti adipisci accusantium velit non. Ipsum
+            mollitia ad nam consectetur totam, tenetur assumenda optio quae deleniti?
+        </p>
+    </section>
+
+    <section class="container p-10 mx-auto font-assassin">
+        <div class="p-10 border rounded-lg shaddow-lg">
+            <img src="./assets/image/2.jpg" alt="" width="200px" class="float-left mr-3">
+            <p class="text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quas dolorem est in quae assumenda debitis? Quam, aliquid quod? Qui quis ipsum esse obcaecati et cupiditate nemo sequi corporis error natus maiores, delectus repellat dignissimos aperiam praesentium enim possimus sunt officia repudiandae voluptatum quidem nobis id? Debitis beatae quis eaque in asperiores ad, unde molestias rem, ducimus corporis optio consequatur quam cumque obcaecati. Ab in, tempora dignissimos, consequuntur, aliquid molestiae dolorem atque quasi voluptate reprehenderit eveniet voluptatum odio est omnis molestias error suscipit velit nesciunt a odit animi vel soluta minus. Reiciendis laboriosam aliquam repellat cum laborum alias officia voluptates. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus quia, dolorem repellendus perspiciatis esse debitis animi cumque iste non rem nam illo voluptatibus incidunt eius repellat accusantium magni nisi distinctio excepturi aut. Deleniti enim numquam a, neque assumenda nulla cum eius ducimus, quod molestiae blanditiis officia sunt adipisci molestias exercitationem.
+            </p> 
+        </div>
+    </section>
+    
+    <!-- Character -->
+    <section id="team" class="p-12 text-center bg-slate-200 dark:bg-slate-600 font-assassin">
+        <h1 class="mb-3 text-4xl font-bold">Character</h1>
+        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis adipisci vel quibusdam!</span>
+        <div class="flex mt-10 wrapper">
+
+            <div class="w-[10%] flex items-center justify-end">
+                <button id="left" class="px-3 py-2 text-xl text-right text-white rounded-full bg-slate-400/50 dark:bg-white/50 hover:bg-emerald-400 dark:hover:bg-emerald-400">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+            </div>
+            
+            <div id="sliderContainer" class="w-[80%] px-6 text-slate-700">
+                <ul id="slider" class="flex gap-[52px] overflow-hidden cursor-pointer">
+                    <li>
+                        <div class="card-img-container group">
+                            <img class="card-img" src="./assets/image/gallery/C1.webp" alt="Character">
+                            <span class="inline-block p-2 text-xl font-semibold">Chalan Minang</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-img-container group">
+                            <img class="card-img" src="./assets/image/gallery/C2.webp" alt="Character">
+                            <span class="inline-block p-2 text-xl font-semibold">Chalan Minang</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-img-container group">
+                            <img class="card-img" src="./assets/image/gallery/C3.webp" alt="Character">
+                            <span class="inline-block p-2 text-xl font-semibold">Chalan Minang</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-img-container group">
+                            <img class="card-img" src="./assets/image/gallery/C4.webp" alt="Character">
+                            <span class="inline-block p-2 text-xl font-semibold">Chalan Minang</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-img-container group">
+                            <img class="card-img" src="./assets/image/gallery/C6.webp" alt="Character">
+                            <span class="inline-block p-2 text-xl font-semibold">Chalan Minang</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-img-container group">
+                            <img class="card-img" src="./assets/image/gallery/C7.webp" alt="Character">
+                            <span class="inline-block p-2 text-xl font-semibold">Chalan Minang</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-img-container group">
+                            <img class="card-img" src="./assets/image/gallery/C8.webp" alt="Character">
+                            <span class="inline-block p-2 text-xl font-semibold">Chalan Minang</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-img-container group">
+                            <img class="card-img" src="./assets/image/gallery/C9.webp" alt="Character">
+                            <span class="inline-block p-2 text-xl font-semibold">Chalan Minang</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-img-container group">
+                            <img class="card-img" src="./assets/image/gallery/C10.webp" alt="Character">
+                            <span class="inline-block p-2 text-xl font-semibold">Chalan Minang</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card-img-container group">
+                            <img class="card-img" src="./assets/image/gallery/C11.webp" alt="Character">
+                            <span class="inline-block p-2 text-xl font-semibold">Chalan Minang</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="w-[10%] flex items-center">           
+                <button id="right" class="px-3 py-2 text-xl text-white rounded-full bg-slate-400/50 hover:bg-emerald-400 dark:bg-white/50 dark:hover:bg-emerald-400 ">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- RESPONSIVE -->
+    <section class="p-10">
+        <div class="container max-w-md px-6 mx-auto font-assassin sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
+            <div class="lg:p-12 lg:flex-1">
+                <h3 class="text-3xl font-bold text-gray-800 sm:text-4xl">Som <span class="text-sky-500">Olaf</span> Brodimus</h3>
+                <img src="./assets/image/3.jpg" class="mt-4 shadow-xl rounded-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-right lg:hidden" alt="profile">
+                <h2 class="mt-4 text-2xl font-semibold text-gray-800 sm:mt-6 sm:3xl">Belajar <span class="text-sky-500">TailwindCSS</span></h2>
+                <p class="mt-2 text-justify text-gray-700 sm:mt-4 sm:text-xl">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eum eligendi quia tenetur. Nisi commodi eveniet, earum quas expedita veniam obcaecati delectus mollitia ducimus quasi adipisci maxime, esse eos. Quaerat dignissimos beatae doloribus error cum ea! Corporis quod esse quas impedit. Dolorum ad pariatur ex illo voluptatibus sint assumenda dolores.
+                </p>
+                <div class="mt-4 text-white sm:mt-6">
+                    <a href="" class="inline-block px-5 py-3 font-semibold tracking-wider bg-black rounded-lg shadow-lg ">FOLLOW ME, CLICK HERE!</a>
+                </div>
+            </div>
+            <div class="hidden overflow-hidden lg:flex lg:w-1/2">
+                <img src="./assets/image/4.jpg" alt="gambar" class="bg-cover rounded-l-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="py-10 font-assassin bg-slate-200 dark:bg-slate-600">
+        <h1 class="p-5 mb-8 text-4xl font-bold text-center">Gallery</h1>
+
+        <div class="container w-full mx-auto overflow-auto sm:flex sm:flex-wrap sm:justify-center sm:gap-2">
+            <div class="group hover:scale-95 transition-all duration-500 rounded-lg overflow-hidden shadow-lg mb-6 sm:mb-0 sm:w-64 md:w-80 lg:w-72 xl:w-[429px]">
+                <img src="./assets/image/gallery/1.jpg" alt="gambar" class="transition-all duration-500 group-hover:scale-125">
+            </div>
+            <div class="group hover:scale-95 transition-all duration-500 rounded-lg overflow-hidden shadow-lg mb-6 sm:mb-0 sm:w-64 md:w-80 lg:w-72 xl:w-[429px]">
+                <img src="./assets/image/gallery/2.jpg"  alt="gambar" class="transition-all duration-500 group-hover:scale-125">
+            </div>
+            <div class="group hover:scale-95 transition-all duration-500 rounded-lg overflow-hidden shadow-lg mb-6 sm:mb-0 sm:w-64 md:w-80 lg:w-72 xl:w-[429px]">
+                <img src="./assets/image/gallery/3.jpg"  alt="gambar" class="transition-all duration-500 group-hover:scale-125">
+            </div>
+            <div class="group hover:scale-95 transition-all duration-500 rounded-lg overflow-hidden shadow-lg mb-6 sm:mb-0 sm:w-64 md:w-80 lg:w-72 xl:w-[429px]">
+                <img src="./assets/image/gallery/4.jpg"  alt="gambar" class="transition-all duration-500 group-hover:scale-125">
+            </div>
+            <div class="group hover:scale-95 transition-all duration-500 rounded-lg overflow-hidden shadow-lg mb-6 sm:mb-0 sm:w-64 md:w-80 lg:w-72 xl:w-[429px]">
+                <img src="./assets/image/gallery/5.jpg" alt="gambar" class="transition-all duration-500 group-hover:scale-125">
+            </div>        
+            <div class="group hover:scale-95 transition-all duration-500 rounded-lg overflow-hidden shadow-lg mb-6 sm:mb-0 sm:w-64 md:w-80 lg:w-72 xl:w-[429px]">
+                <img src="./assets/image/gallery/6.jpg"  alt="gambar" class="transition-all duration-500 group-hover:scale-125">
+            </div>        
+        </div>
+        <div class="flex justify-center w-full mt-14">
+            <a href="gallery.html" class="px-2 py-1 text-xl font-bold text-white rounded-full animate-bounce bg-emerald-400 dark:bg-white/50 hover:bg-green-400 dark:hover:bg-green-400">Visit More</a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <footer id="contact">
+        <div class="container max-w-full p-5 mx-auto bg-slate-800 md:gap-5 md:flex md:flex-wrap-reverse md:justify-center lg:flex-nowrap lg:w-full lg:py-10 xl:px-36">
+            <div class="mb-5 sm:w-full md:w-80 md:m-0 xl:w-full">
+                <h2 class="font-bold text-3xl text-white font-assassin px-2 py-1 border-solid border-l-[5px] border-emerald-500 dark:border-white">Assassin'S Creed<strong class="text-green-600"> Valhalla</strong>
+                </h2>
+                <p class="mt-3 text-justify text-md text-slate-300">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum accusamus dolorum minima
+                    consequuntur ex, consectetur sunt velit. Beatae itaque possimus fugit recusandae harum. Illo sint,
+                    molestiae repellendus iste repellat eos?
+                </p>
+            </div>
+            
+            <div class="mb-5 sm:w-full md:w-80 md:mb-0 xl:w-full">
+                <h3 class="py-2 text-xl font-bold text-white border-b-2 border-solid font-assassin border-emerald-500 dark:border-white sm:text-2xl md:text-center lg:text-xl lg:text-justify">CONTACT US</h3>
+                <ul class="mt-3 space-y-1 text-slate-300 text-md">
+                    <li class="">Malahasa Street RT 02 | RW 02</li>
+
+                    <li class="">New Island</li>
+                    <li class="">Indonesia</li>
+                    <li class=""><strong>Phone :</strong> +62-8124262xx</li>
+                    <li class=""><strong>Email :</strong> valhalla@gmail.com</li>
+                </ul>
+                <div class="mt-7">
+                    <ul class="flex space-x-3 sm:text-xl">
+                        <li class="bg-black rounded-full px-3 py-[6px] hover:bg-emerald-500 dark:hover:bg-white group"><a class="text-lg"
+                                href="#"><i class="text-white fa-brands fa-facebook group-hover:text-black"></i></a></li>
+                        <li class="bg-black rounded-full px-3 py-[6px] hover:bg-emerald-500 dark:hover:bg-white group"><a class="text-lg"
+                                href="#"><i class="text-white fa-brands fa-instagram group-hover:text-black"></i></a></li>
+                        <li class="bg-black rounded-full px-3 py-[6px] hover:bg-emerald-500 dark:hover:bg-white group"><a class="text-lg"
+                                href="#"><i class="text-white fa-brands fa-twitter group-hover:text-black"></i></a></li>
+                        <li class="bg-black rounded-full px-3 py-[6px] hover:bg-emerald-500 dark:hover:bg-white group"><a class="text-lg"
+                                href="#"><i class="text-white fa-brands fa-discord group-hover:text-black"></i></a></li>
+                        <li class="bg-black rounded-full px-3 py-[6px] hover:bg-emerald-500 dark:hover:bg-white group"><a class="text-lg"
+                                href="#"><i class="text-white fa-brands fa-github group-hover:text-black"></i></a></li>
+                    </ul>
+                </div>
+            </div>  
+
+            <div class="mb-5 sm:w-full md:w-96 md:m-0 md:text-center lg:text-justify xl:w-full">
+                <h3 class="py-2 text-xl font-bold text-white border-b-2 border-solid font-assassin border-emerald-500 dark:border-white sm:text-2xl lg:text-xl">OUR NEWSLETTER
+                </h3>
+                <p class="mt-4 text-white text-md md:text-center lg:text-justify">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio vero earum laboriosam pariatur
+                    id voluptatibus.
+                </p>
+                <div class="flex justify-between px-3 mt-12 pb-9 md:p-0">
+                    <input type="text" class="text-gray-600 focus:outline-none dark:ring-1 dark:ring-white w-[100%] p-2">
+                    <button class="px-3 py-2 text-white bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 dark:bg-slate-900 dark:ring-1 dark:ring-white dark:hover:bg-slate-800 dark:active:bg-slate-950">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="p-6 text-sm text-center text-white bg-black">
+            <span>
+                © Copyright <strong>RBomboah</strong>. All Rights Reserved
+            </span>
+            <br>
+            <span>Designed by <a href="https://tailwindcss.com"
+                    class="text-green-500"><strong>TailwindCSS</strong></a></span>
+        </div>
+    </footer>
+        <!-- js for dark mode % responsive -->
+        <script src="./js/script.js"></script>
+</body>
+
+</html>
